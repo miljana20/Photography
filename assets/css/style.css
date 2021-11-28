@@ -3,6 +3,8 @@
     padding: 0px;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    word-wrap: break-word;
+    
 }
 .cleaner{
     clear: both;
