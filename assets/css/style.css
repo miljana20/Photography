@@ -30,6 +30,7 @@ ul{
     margin: 0px auto;
     width: 76%;
     background-color: white;
+    overflow: hidden;
 }
 header{
     width: 100%;
