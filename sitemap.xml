@@ -1,0 +1,20 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://miljana20.github.io/Photography/index.html</loc>
+        <lastmod>2021-11-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://miljana20.github.io/Photography/assets/author.html</loc>
+        <lastmod>2021-11-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://miljana20.github.io/Photography/assets/offers.html</loc>
+        <lastmod>2021-11-30</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+</urlset>

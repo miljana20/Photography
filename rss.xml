@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+    <title>Notifications</title>
+    <link>https://miljana20.github.io/Photography/index.html</link>
+    <description>What's new on Igor Čolić Photography?</description>
+    <item>
+        <title>New in the offer</title>
+        <link>https://miljana20.github.io/Photography/offers.html</link>
+        <description>New in the offer on our site!</description>
+    </item>
+    <item>
+        <title>New in our gallery</title>
+        <link>https://miljana20.github.io/Photography/index.html/#gallery</link>
+        <description>New products of our work!</description>
+    </item>
+    </channel>
+</rss>
