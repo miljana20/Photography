@@ -93,11 +93,17 @@ p{
     width: 35%;
     float: left;
     margin-left: 100px;
+    animation-name: left-a;
+    animation-duration: 2s;
+    position: relative;
 }
 .right{
     width: 35%;
     float: right;
     margin-right: 100px;
+    animation-name: right-a;
+    animation-duration: 2s;
+    position: relative;
 }
 .text{
     padding: 20px;
@@ -212,9 +218,7 @@ mark{
     border-radius: 0px 50px;
 }
 #gallery{
-    background-color: rgba(0, 128, 128, 0.6);
-}
-#gallery{
+    background-image: linear-gradient( to bottom, rgba(0, 128, 128, 0.6), white, rgba(0, 128, 128, 0.6));
     padding-top: 0px;
 }
 #row{
@@ -372,6 +376,14 @@ td{
 .tl{
     text-align: left;
 }
+.a-r{
+    animation-name: right-a;
+    animation-duration: 4s;
+}
+.a-l{
+    animation-name: left-a;
+    animation-duration: 4s;
+}
 footer{
     background-color: #1a1a1aa1;
     backdrop-filter: blur(8px);
@@ -407,4 +419,12 @@ footer ul li a:hover{
     color: white;
     transition: 1s;
     border: solid teal 1px;
+}
+@keyframes left-a{
+    from{left: -100%;}
+    to{left: 0px;}
+}
+@keyframes right-a{
+    from{right: -100%;}
+    to{right: 0px;}
 }
