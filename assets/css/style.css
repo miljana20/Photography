@@ -95,7 +95,7 @@ p{
     float: left;
     margin-left: 100px;
     animation-name: left-a;
-    animation-duration: 2s;
+    animation-duration: 1s;
     position: relative;
 }
 .right{
@@ -103,7 +103,7 @@ p{
     float: right;
     margin-right: 100px;
     animation-name: right-a;
-    animation-duration: 2s;
+    animation-duration: 1s;
     position: relative;
 }
 .text{
