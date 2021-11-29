@@ -3,23 +3,30 @@
     padding: 0px;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    word-wrap: break-word;
+}
+:root{
+    --teal:rgb(0, 128, 128);
+    --black:rgb(0, 0, 0);
+    --white:rgb(255, 255, 255);
+    --transparent-teal:rgba(0, 128, 128, 0.6);
 }
 .cleaner{
     clear: both;
 }
 body{
-    background-color: teal;
+    background-color: var(--teal);
     text-align: center;
     font-family: 'Blinker', sans-serif;
 }
 a{
     text-decoration: none;
-    color: teal;
+    color: var(--teal);
     transition: 2s;
 }
 a:hover{
     transition: 2s;
-    color: #000000;
+    color: var(--black);
 }
 ul{
     list-style-type: none;
@@ -27,20 +34,27 @@ ul{
 .center{
     margin: 0px auto;
     width: 76%;
-    background-color: white;
+    background-color: var(--white);
     overflow: hidden;
 }
 header{
-    width: 100%;
+    margin: 0px auto;
+    width: 76%;
     position: sticky;
-    top: 0px;
-    background-color: rgba(0, 128, 128, 0.6);
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(6px);
     z-index: 10;
+}
+.white-bg{
+    background-color: var(--white);
 }
 .logo{
     float: left;
     width: 20%;
+    position: relative;
+    animation-name: top-a;
+    animation-duration: 2s;
 }
 .logo img{
    height: 38px;
@@ -49,6 +63,9 @@ nav{
     float: right;
     width: 60%;
     padding: 5px;
+    position: relative;
+    animation-name: top-a;
+    animation-duration: 2s;
 }
 nav ul {
     list-style-type: none;
@@ -56,22 +73,19 @@ nav ul {
 nav ul li{
     display: inline-block;
     margin: 5px;
-    border-right: solid teal 2px;
+    border-right: solid rgba(0, 128, 128, 0.4) 2px;
 }
 nav ul li:last-of-type{
     border: none;
 }
 nav ul li a{
-    color: white;
+    color: var(--black);
     padding-right: 10px;
     transition: 2s;
 }
-nav ul li a:hover{
-    color: teal;
+nav ul li a:hover, .active{
+    color: var(--teal);
     transition: 1s;
-}
-.active{
-    color: teal;
 }
 p{
     font-size: 20px;
@@ -87,15 +101,15 @@ p{
 }
 #start{
     padding-bottom: 0px;
-    background-color: rgba(0, 128, 128, 0.6);
-    color: white;
+    background-color: var(--transparent-teal);
+    color: var(--white);
 }
 .left{
     width: 35%;
     float: left;
     margin-left: 100px;
     animation-name: left-a;
-    animation-duration: 1s;
+    animation-duration: 2s;
     position: relative;
 }
 .right{
@@ -103,7 +117,7 @@ p{
     float: right;
     margin-right: 100px;
     animation-name: right-a;
-    animation-duration: 1s;
+    animation-duration: 2s;
     position: relative;
 }
 .text{
@@ -111,7 +125,7 @@ p{
     text-align: left;
 }
 #topquote{
-    color: rgba(0, 128, 128, 0.6);
+    color: var(--transparent-teal);
     font-size: 40px;
 }
 h1{
@@ -124,18 +138,18 @@ h1::after {
     margin: 0 auto;
     width: 42px;
     height: 3px;
-    background-color: teal;
+    background-color: var(--teal);
 }
 h2{
     margin: 20px 0;
-    color: teal;
+    color: var(--teal);
     font-size: 24px;
 }
 .pt{
     padding-top: 68.8px;
 }
 .line{
-    background: linear-gradient(to right, rgba(0, 128, 128, 0) , rgba(0, 128, 128, 1), rgba(0, 128, 128, 0));
+    background: linear-gradient(to right, rgba(0, 128, 128, 0) , var(--teal), rgba(0, 128, 128, 0));
     width: 80%;
     height: 2px;
     margin: 0px auto;
@@ -143,7 +157,7 @@ h2{
 }
 mark{
     background-color: transparent;
-    color: rgba(0, 128, 128, 0.6);
+    color: var(--transparent-teal);
 }
 #photographer img{
     width: 100%;
@@ -151,12 +165,12 @@ mark{
 #round img{
     border-radius: 50%;
     width: 75%;
-    box-shadow: 16px 8px teal;
+    box-shadow: 16px 8px var(--teal);
 }
 #girl{
     position: relative;
     z-index: 9;
-    box-shadow: 16px -10px rgba(0, 128, 128, 0.6);
+    box-shadow: 16px -10px var(--transparent-teal);
     border-radius: 0px 50px;
 }
 #girl::after{
@@ -168,8 +182,8 @@ mark{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: solid 5px white;
-    background-color: teal;
+    border: solid 5px var(--white);
+    background-color: var(--teal);
 }
 #girl::before{
     content: "";
@@ -180,8 +194,8 @@ mark{
     width: 60px;
     height: 20px;
     border-radius: 20px;
-    border: solid 3px white;
-    background-color: teal;
+    border: solid 3px var(--white);
+    background-color: var(--teal);
 }
 #girl img{
     width: 100%;
@@ -200,7 +214,7 @@ mark{
     top: 60px;
     left: -59px;
     border-radius: 100px 0px 0px 100px;
-    background-color: rgba(0, 128, 128, 0.6);
+    background-color: var(--transparent-teal);
 }
 #author1::after{
     content: "";
@@ -210,16 +224,16 @@ mark{
     right: -5px;
     width: 120px;
     height: 30px;
-    border: solid 3px white;
+    border: solid 3px var(--white);
     border-radius: 20px;
-    background-color: teal;
+    background-color: var(--teal);
 }
 #author1 img{
     width: 80%;
     border-radius: 0px 50px;
 }
 #gallery{
-    background-image: linear-gradient( to bottom, rgba(0, 128, 128, 0.6), white, rgba(0, 128, 128, 0.6));
+    background-image: linear-gradient( to bottom, var(--transparent-teal), var(--white), var(--transparent-teal));
     padding-top: 0px;
 }
 #row{
@@ -231,6 +245,7 @@ mark{
     float: left;
     width: 25%;
     padding: 10px;
+    position: relative;
 }
 .img {
     width: 100%;
@@ -258,9 +273,8 @@ mark{
     left: -200px;
 }
 .contact{
-    border: solid 5px teal;
-    position: relative;
-    background-color: white;
+    border: solid 5px var(--teal);
+    background-color: var(--white);
 }
 .contact-box{
     width: 42%;
@@ -270,7 +284,7 @@ mark{
     font-weight: 800;
 }
 .contact-box i{
-    color: rgba(0, 128, 128, 0.6);
+    color: var(--transparent-teal);
 }
 #c1{
     position: relative;
@@ -281,10 +295,11 @@ mark{
 #c1 img{
     border-radius: 50px 0px 0px 0px;
     width: 100%;
-    box-shadow: 12px 16px teal;
+    box-shadow: 12px 16px var(--teal);
 }
 #c2{
     display: inline-block;
+    position: relative;
     left: -60px;
     top: -200px;
     width: 35%;
@@ -293,6 +308,7 @@ mark{
 }
 #c3{
     width: 50%;
+    position: relative;
     top: -100px;
     right: -310px;
     z-index: 3;
@@ -308,35 +324,35 @@ input[type=text], input[type=email], textarea{
     padding: 10px 5px;
     width: 65%;
     border: none;
-    border-bottom: 2px solid teal;
-    color: teal;
+    border-bottom: solid var(--teal) 2px;
+    color: var(--teal);
     outline: none;
 }
 input[type=text]:focus, input[type=email]:focus, textarea:focus{
     border: none;
-    background-color: rgba(0, 128, 128, 0.6);
+    background-color: var(--transparent-teal);
     border-radius: 5px;
     transition: 1s;
 }
 input[type=submit]{
     padding: 10px 15px;
     border-radius: 20px;
-    border: solid 3px teal;
-    background-color: white;
-    color: teal;
+    border: solid var(--teal) 3px;
+    background-color: var(--white);
+    color: var(--teal);
     transition: 1s;
 }
 input[type=submit]:hover{
-    border: solid 3px white;
+    border: solid 3px var(--white);
     padding: 10px 20px;
-    background-color: teal;
-    color: white;
+    background-color: var(--teal);
+    color: var(--white);
     transition: 1,5s;
 }
 #me{
     width: 80%;
     position: relative;
-    border: solid 5px teal;
+    border: solid var(--teal) 5px;
     top: -50px;
 }
 #me img{
@@ -350,10 +366,10 @@ table{
     border-collapse: collapse;
     margin: 20px auto;
     font-size: 20px;
-    position:relative;
+    position: relative;
 }
 tr{
-    border-bottom: solid 0.5px teal;
+    border-bottom: solid var(--teal) 0.5px;
     transition: 1s;
 }
 tr:hover {
@@ -361,15 +377,15 @@ tr:hover {
     transition: 0.5s;
 }
 th{
-    background-color: teal;
-    color: white;
+    background-color: var(--teal);
+    color: var(--white);
     font-weight: 500;
     padding: 3px;
     border-radius: 15px 15px 0 0;
 }
 td{
     width: 50%;
-    color: teal;
+    color: var(--teal);
     padding: 3px 20px;
 }
 .tr{
@@ -389,14 +405,14 @@ td{
 footer{
     background-color: #1a1a1aa1;
     backdrop-filter: blur(8px);
-    color: white;
+    color: var(--white);
     padding: 10px;
 }
 footer p a{
     transition: 2s;
 }
 footer p a:hover{
-    color: #000;
+    color: var(--black);
     transition: 1s;
 }
 footer p:first-of-type{
@@ -412,15 +428,15 @@ footer ul li{
 }
 footer ul li a{
     border-radius: 30%;
-    background-color: white;
+    background-color: var(--white);
     padding: 4px 4px;
     transition: 2s;
 }
 footer ul li a:hover{
     background-color: #1a1a1a;
-    color: white;
+    color: var(--white);
     transition: 1s;
-    border: solid teal 1px;
+    border: solid var(--teal) 1px;
 }
 @keyframes left-a{
     from{left: -100%;}
@@ -429,4 +445,8 @@ footer ul li a:hover{
 @keyframes right-a{
     from{right: -100%;}
     to{right: 0px;}
+}
+@keyframes top-a{
+    from{top: -300px;}
+    to{top: 0px;}
 }
