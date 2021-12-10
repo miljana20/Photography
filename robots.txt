@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://miljana20.github.io/beeworld/assets/sitemap.xml
+Sitemap: https://miljana20.github.io/Photography/assets/sitemap.xml
